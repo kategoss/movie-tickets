@@ -9,47 +9,40 @@
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
-    <title></title>
+    <title>Address Book:</title>
   </head>
   <body>
-    <div class="container">
-      <h1>New Contact Information:</h1>
-      <div>
-        <form id="formOne">
-          <div class="form-group">
-            <label for="contact">Name:</label>
-            <input id="contact" class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="address">Address:</label>
-            <input id="address" class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="">An animal</label>
-            <input id="" class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="">An exclamation</label>
-            <input id="" class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="">A past tense verb</label>
-            <input id="" class="form-control" type="text">
-          </div>
-          <div class="form-group">
-            <label for="">A noun</label>
-            <input id="" class="form-control" type="text">
-          </div>
-          <button type="submit" class="btn" id="dark-button">Add Contact.</button>
-        </form>
-      </div>
-      <div class="well">
-        <div id="contactList">
-          <h1>Your Contacts:</h1>
-          <ul>
-            <li><span class="contact"></span></li>
-            <li><span class="address"></span></li>
+    <<div class="container">
+      <h1>Address book</h1>
+
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Add a contact:</h2>
+          <form id="new-contact">
+            <div class="form-group">
+              <label for="new-first-name">First name</label>
+              <input type="text" class="form-control" id="new-first-name">
+            </div>
+            <div class="form-group">
+              <label for="new-last-name">Last name</label>
+              <input type="text" class="form-control" id="new-last-name">
+            </div>
+
+            <button type="submit" class="btn">Add</button>
+          </form>
+
+          <h2>Contacts:</h2>
+          <ul id="contacts">
+
           </ul>
+        </div>
+        <div class="col-md-6">
+          <div id="show-contact">
+            <h2></h2>
+
+            <p>First name: <span class="first-name"></span></p>
+            <p>Last name: <span class="last-name"></span></p>
+          </div>
         </div>
       </div>
     </div>
