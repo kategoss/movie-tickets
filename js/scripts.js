@@ -4,6 +4,7 @@ function Ticket(movie, time, age) {
   this.movie = movie;
   this.time = time;
   this.age = age;
+
 }
 
 Ticket.prototype.adultTicketPrice = function() {
@@ -18,11 +19,7 @@ Ticket.prototype.seniorTicketPrice = function() {
 
 }
 
-Ticket.prototype.adultMatineePrice = function() {
-
-}
-
-Ticket.prototype.childMatineePrice = function() {
+Ticket.prototype.MatineePrice = function() {
 
 }
 
@@ -40,10 +37,26 @@ $(document).ready(function() {
     var ageInput = $("#age").val();
 
 
-    $(".movie-name").text(nameInput)
-    $(".movie-time").text(focusInput);
-    $(".age").text(employerInput);
+    var newTicket = new Ticket(movieInput, timeInput, ageInput);
 
+
+    $(".movie-name").text(movieInput)
+    $(".movie-time").text(timeInput);
+    $(".age").text(ageInput);
+
+
+
+    if (timeInput === "2:00 PM" || timeInput === "4:30 PM") {
+      $("#result1").show();
+    } else if (ageInput === "Under 18") {
+      $("#result2").show();
+    } else if(ageInput === "Over 65") {
+      $("#result3").show();
+    } else if (ageInput === "19-64") {
+      $("#result4").show();
+    }
+
+    console.log();
 
   });
 });
